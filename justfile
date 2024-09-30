@@ -2,8 +2,18 @@
 
 
 sft:
+    # ok so I gave up on getting sympo working, I just used the alignment handbook
+    # but hte potry is here
     . ./.venv/bin/activate
-    ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_simpo.py training_configs/llama-3-2-1b-base-sft.yaml
+    # ACCELERATE_LOG_LEVEL=info accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml scripts/run_simpo.py training_configs/llama-3-2-1b-base-sft.yaml
+
+    # ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero3b.yaml --num_processes=1 scripts/run_sft.py recipes/llama-3-2-1b-base-sft.yaml
+
+    cp accelerate_configs/deepspeed_zero3.yaml alignment-handbook/recipes/accelerate_configs/deepspeed_zero3b.yaml
+    cp training_configs/llama-3-2-1b-base-sft.yaml alignment-handbook/recipes/llama-3-2-1b-base-sft.yaml
+    cd alignment-handbook
+    ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero3b.yaml --num_processes=1 scripts/run_sft.py recipes/llama-3-2-1b-base-sft.yaml
+    # ACCELERATE_LOG_LEVEL=info accelerate launch --config_file ../accelerate_configs/deepspeed_zero3.yaml --num_processes=1 scripts/run_sft.py ../training_configs/llama-3-2-1b-base-sft.yaml
 
 
 install:
