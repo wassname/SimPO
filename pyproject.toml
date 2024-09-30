@@ -24,6 +24,7 @@ alignment-handbook = {git = "https://github.com/huggingface/alignment-handbook.g
 deepspeed = "^0.14"
 # transformers="~4.39.3"
 # python -m pip install flash-attn --no-build-isolation
+wandb = "^0.18.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"

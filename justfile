@@ -11,6 +11,7 @@ sft:
 
     cp accelerate_configs/deepspeed_zero3.yaml alignment-handbook/recipes/accelerate_configs/deepspeed_zero3b.yaml
     cp training_configs/llama-3-2-1b-base-sft.yaml alignment-handbook/recipes/llama-3-2-1b-base-sft.yaml
+    # .venv/src/alignment-handbook/
     cd alignment-handbook
     ACCELERATE_LOG_LEVEL=info accelerate launch --config_file recipes/accelerate_configs/deepspeed_zero3b.yaml --num_processes=1 scripts/run_sft.py recipes/llama-3-2-1b-base-sft.yaml
     # ACCELERATE_LOG_LEVEL=info accelerate launch --config_file ../accelerate_configs/deepspeed_zero3.yaml --num_processes=1 scripts/run_sft.py ../training_configs/llama-3-2-1b-base-sft.yaml
@@ -32,6 +33,7 @@ install:
     mamba install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
 
     # install alignment handbook
+    # or use .venv/src/alignment-handbook/
     git clone https://github.com/huggingface/alignment-handbook.git
     cd ./alignment-handbook/
     python -m pip install .

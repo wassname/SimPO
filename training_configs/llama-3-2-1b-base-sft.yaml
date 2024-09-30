@@ -18,7 +18,7 @@ bf16: true
 do_eval: true
 evaluation_strategy: steps
 eval_steps: 200
-gradient_accumulation_steps: 1
+gradient_accumulation_steps: 4
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: False
@@ -35,8 +35,8 @@ num_train_epochs: 1
 output_dir: /workspace/checkpoints_new/llama-3-2-1b-sft
 run_name: llama-3-2-1b-sft
 overwrite_output_dir: true
-per_device_eval_batch_size: 32
-per_device_train_batch_size: 32
+per_device_eval_batch_size: 8
+per_device_train_batch_size: 8
 push_to_hub: false
 remove_unused_columns: true
 report_to:
