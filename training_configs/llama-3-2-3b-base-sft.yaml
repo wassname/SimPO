@@ -1,5 +1,5 @@
 # Model arguments
-model_name_or_path: NousResearch/Llama-3.2-1B
+model_name_or_path: tanliboy/llama-3.2-3b
 model_revision: main
 torch_dtype: bfloat16
 attn_implementation: flash_attention_2
@@ -22,7 +22,7 @@ gradient_accumulation_steps: 32
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: False
-hub_model_id: llama-3-2-1b-sft
+hub_model_id: llama-3-2-3b-sft
 hub_strategy: every_save
 learning_rate: 2.0e-04
 log_level: info
@@ -32,11 +32,11 @@ lr_scheduler_type: cosine
 max_seq_length: 2048
 max_steps: -1
 num_train_epochs: 3
-output_dir: /workspace/checkpoints_new/llama-3-2-1b-sft
-run_name: llama-3-2-1b-sft
+output_dir: /workspace/checkpoints_new/llama-3-2-3b-sft
+run_name: llama-3-2-3b-sft
 overwrite_output_dir: true
-per_device_eval_batch_size: 8
-per_device_train_batch_size: 8
+per_device_eval_batch_size: 4
+per_device_train_batch_size: 4
 push_to_hub: false
 remove_unused_columns: true
 report_to:

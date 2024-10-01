@@ -28,6 +28,7 @@ wandb = "^0.18.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
+ipykernel = "^6.29.5"
 
 [virtualenvs]
 in-project = true
