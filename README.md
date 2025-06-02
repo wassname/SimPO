@@ -1,5 +1,7 @@
 In this form I SFT some base models, so they are suitable for testing alternatives to DPO. It's for my project: https://github.com/wassname/repr-preference-optimization
 
+see my justfile
+
 I train:
 - [ ] HuggingFaceTB/SmolLM2-135M
 - [ ] HuggingFaceTB/SmolLM2-360M

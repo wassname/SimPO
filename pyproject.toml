@@ -11,6 +11,11 @@ dependencies = [
     "wandb>=0.18.2",
     # git‐based dep
     "alignment-handbook",
+    "hatchling>=1.27.0",
+    "wheel>=0.45.1",
+    "setuptools>=80.9.0",
+    "editables>=0.5",
+    "flash-attn>=2.7.4.post1",
 ]
 
 [dependency-groups]
