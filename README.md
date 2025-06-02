@@ -1,3 +1,22 @@
+In this form I SFT some base models, so they are suitable for testing alternatives to DPO. It's for my project: https://github.com/wassname/repr-preference-optimization
+
+I train:
+- [ ] HuggingFaceTB/SmolLM2-135M
+- [ ] HuggingFaceTB/SmolLM2-360M
+- [ ] HuggingFaceTB/SmolLM2-1.7B
+- [ ] Qwen/Qwen3-0.6B-Base
+- [ ] Qwen/Qwen2-4B-Base
+- [x] https://huggingface.co/wassname/llama-3-2-1b-sft
+
+Other peoples base->sft models
+- allenai/OLMo-2-0425-1B-SFT
+- allenai/OLMoE-1B-7B-0924-SFT
+- https://huggingface.co/allenai/OLMo-2-0425-1B-SFT
+- https://huggingface.co/allenai/OLMo-7B-SFT-hf
+- https://huggingface.co/princeton-nlp/Llama-3-Base-8B-SFT
+
+Original readme
+----
 # Simple Preference Optimization (SimPO)
 
 This repository contains the code and released models for our paper [SimPO: Simple Preference Optimization with a Reference-Free Reward](https://arxiv.org/abs/2405.14734). We propose a simpler and more effective preference optimization algorithm than DPO (Direct Preference Optimization) without using a reference model. SimPO outperforms DPO and its latest variants across AlpacaEval 2, MT-Bench, and Arena-Hard benchmarks under various settings.
